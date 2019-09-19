@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Const's to save a little bit of space
 const englishHelloPrefix = "Hello, "
 const dutchHelloPrefix = "Hallo, "
 const frenchHelloPrefix = "Bonjuor, "
@@ -20,6 +21,8 @@ func Hello(name string, language string) string {
 	return greetingPrefix(language) + name
 }
 
+// This function has named return value, doesn't need to be initialized
+// also is the default return
 func greetingPrefix(language string) (prefix string) {
 	switch language {
 	case french:
@@ -34,6 +37,7 @@ func greetingPrefix(language string) (prefix string) {
 	return
 }
 
+// Main function calls the hello function
 func main() {
 	fmt.Println(Hello("Matt", french))
 }
